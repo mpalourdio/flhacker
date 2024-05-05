@@ -1,3 +1,5 @@
+[![CI](https://github.com/mpalourdio/flhacker/actions/workflows/main.yml/badge.svg)](https://github.com/mpalourdio/flhacker/actions/workflows/main.yml)
+
 # What is this ?
 
 Intended to run as CLI, it extracts the artwork embedded in audio files (FLAC/MP3) and display it as ascii art.
