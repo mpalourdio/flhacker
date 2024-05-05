@@ -9,8 +9,6 @@
 
 package com.mpalourdio.projects.flhacker;
 
-import org.apache.commons.io.FileUtils;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.io.File;
@@ -27,7 +25,6 @@ public class Img2Ascii {
     private final FileWriter filewrt;
 
     public Img2Ascii() throws IOException {
-        FileUtils.deleteQuietly(new File(TMP_ASCIIART_TXT));
         filewrt = new FileWriter(TMP_ASCIIART_TXT, false);
         prntwrt = new PrintWriter(filewrt);
     }
