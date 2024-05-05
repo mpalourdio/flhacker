@@ -38,6 +38,12 @@ public class FlhackerApplication {
     public static void main(String[] args) throws IOException, CannotReadException, TagException, InvalidAudioFrameException, ReadOnlyFileException {
         SpringApplication.run(FlhackerApplication.class, args);
 
+        // init cleanup if files already exist
+        var tmpResizedFile = new File(TMP_RESIZED_ARTWORK);
+        FileUtils.deleteQuietly(new File(Img2Ascii.TMP_ASCIIART_TXT));
+        FileUtils.deleteQuietly(tmpResizedFile);
+
+        // CLI handgling
         var options = new Options();
         var input = new Option("f", FILE_CMD_LONG_OPTION, true, "input file path which containe the artwork to print");
         input.setRequired(true);
@@ -54,28 +60,23 @@ public class FlhackerApplication {
             formatter.printHelp("utility-name", options);
             System.exit(1);
         }
-        var resizedFile = new File(TMP_RESIZED_ARTWORK);
 
-        try {
-            var audioFile = new File(cmd.getOptionValue(FILE_CMD_LONG_OPTION));
-            var extractedArtwork = AudioFileIO.read(audioFile)
-                    .getTag()
-                    .getFirstArtwork()
-                    .getImage();
+        // main process
+        var audioFile = new File(cmd.getOptionValue(FILE_CMD_LONG_OPTION));
+        var extractedArtwork = AudioFileIO.read(audioFile)
+                .getTag()
+                .getFirstArtwork()
+                .getImage();
 
-            var scaledArtwork = ((BufferedImage) extractedArtwork).getScaledInstance(TARGET_SIZE, TARGET_SIZE, Image.SCALE_DEFAULT);
-            var resized = new BufferedImage(TARGET_SIZE, TARGET_SIZE, BufferedImage.TYPE_INT_RGB);
-            resized.getGraphics().drawImage(scaledArtwork, 0, 0, null);
+        var scaledArtwork = ((BufferedImage) extractedArtwork).getScaledInstance(TARGET_SIZE, TARGET_SIZE, Image.SCALE_DEFAULT);
+        var resized = new BufferedImage(TARGET_SIZE, TARGET_SIZE, BufferedImage.TYPE_INT_RGB);
+        resized.getGraphics().drawImage(scaledArtwork, 0, 0, null);
 
-            ImageIO.write(resized, "png", resizedFile);
+        ImageIO.write(resized, "png", tmpResizedFile);
 
-            var img2Ascii = new Img2Ascii();
-            img2Ascii.convertToAscii(TMP_RESIZED_ARTWORK);
+        var img2Ascii = new Img2Ascii();
+        img2Ascii.convertToAscii(TMP_RESIZED_ARTWORK);
 
-            System.out.println(Files.readString(Path.of(Img2Ascii.TMP_ASCIIART_TXT)));
-        } finally {
-            FileUtils.deleteQuietly(new File(Img2Ascii.TMP_ASCIIART_TXT));
-            FileUtils.deleteQuietly(resizedFile);
-        }
+        System.out.println(Files.readString(Path.of(Img2Ascii.TMP_ASCIIART_TXT)));
     }
 }
