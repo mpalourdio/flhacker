@@ -30,7 +30,7 @@ Who knows ?
 - Run `target/flhacker -f /tmp/my.flac|mp3`. Don't forget to escape spaces etc.
 - See the artwork displayed as ascii art in your terminal.
 
-The needed `reachabilty metadata` are in the [src/main/resources/META-INF/native-image](src/main/resources/META-INF/native-image]) folder.
+The needed `reachabilty metadata` are in the [src/main/resources/META-INF/native-image](src/main/resources/META-INF/native-image) folder.
 
 # JUST MAKE A FUCKING .EXE FILE AND GIVE IT TO ME
 
