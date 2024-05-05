@@ -6,7 +6,7 @@ Intended to run as CLI, it extracts the artwork embedded in audio files (FLAC/MP
 
 # TLDR
 
-- Download the [bin](https://github.com/mpalourdio/flhacker/raw/main/bin/flhacker) (linux x64 only. Windows users must compile it themselves, or get a true OS).
+- Download extract the [bin and the .so](https://github.com/mpalourdio/flhacker/raw/main/bin/flhacker) (linux x64 only. Windows users must compile it themselves, or get a true OS).
 - Run `flhacker -f /tmp/my.flac`
 - Let the magic happen
 
@@ -18,6 +18,8 @@ Who knows ?
 
 - Uses `Spring Boot` as base, because life is too short.
 - Uses [Jaudiotagger](https://www.jthink.net/jaudiotagger/).
+- Uses [image-to-ascii](https://github.com/seujorgenochurras/image-to-ascii).
+- The needed JDK `.so` are dynamically linked.
 
 # Requirements for hacking the codebase
 
@@ -34,7 +36,7 @@ The needed `reachabilty metadata` are in the [src/main/resources/META-INF/native
 
 # JUST MAKE A FUCKING .EXE FILE AND GIVE IT TO ME
 
-The running executable available in the [bin](https://github.com/mpalourdio/flhacker/raw/main/bin/flhacker) is linux x64 only. I may forget to update the bin because this is not automated for now. It may also not target your OS/CPU architecture. 
+The running executable available in the [zip](https://github.com/mpalourdio/flhacker/raw/main/bin/flhacker.zip) is linux x86-64 only. I may forget to update the bin because this is not automated for now. It may also not target your OS/CPU architecture. 
 
 The best way to be up-to-date is to clone the repo and compile the sources if you know what you are doing (or open an issue).
 
