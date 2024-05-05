@@ -77,6 +77,9 @@
   "name":"jakarta.validation.Validator"
 },
 {
+  "name":"java.awt.image.ColorConvertOp"
+},
+{
   "name":"java.io.FilePermission"
 },
 {
@@ -123,6 +126,9 @@
 {
   "name":"java.net.URLPermission",
   "methods":[{"name":"<init>","parameterTypes":["java.lang.String","java.lang.String"] }]
+},
+{
+  "name":"java.nio.ByteBuffer"
 },
 {
   "name":"java.security.AllPermission"
@@ -244,6 +250,10 @@
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.datatype.PartOfSet"] }]
 },
 {
+  "name":"org.jaudiotagger.tag.datatype.StringHashMap",
+  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.datatype.StringHashMap"] }]
+},
+{
   "name":"org.jaudiotagger.tag.datatype.StringNullTerminated",
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.datatype.StringNullTerminated"] }]
 },
@@ -261,7 +271,11 @@
 },
 {
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyAPIC",
-  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyAPIC"] }]
+  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyAPIC"] }, {"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyPIC"] }]
+},
+{
+  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyCOMM",
+  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyCOMM"] }]
 },
 {
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyMCDI",
@@ -270,6 +284,10 @@
 {
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTALB",
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTALB"] }]
+},
+{
+  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTCOM",
+  "methods":[{"name":"<init>","parameterTypes":["java.nio.ByteBuffer","int"] }, {"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTCOM"] }]
 },
 {
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTCON",
@@ -282,6 +300,10 @@
 {
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTDRC",
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTYER"] }]
+},
+{
+  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTENC",
+  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTENC"] }]
 },
 {
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTIT2",
@@ -306,6 +328,14 @@
 {
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTPOS",
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTPOS"] }]
+},
+{
+  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTRCK",
+  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTRCK"] }]
+},
+{
+  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTYER",
+  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTYER"] }]
 },
 {
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTPUB",
