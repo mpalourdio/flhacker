@@ -26,9 +26,15 @@ Who knows ?
 
 The needed `reachabilty metadata` are in the [src/main/resources/META-INF/native-image](src/main/resources/META-INF/native-image]) folder.
 
-# Five me a downloadable bin
+# JUST MAKE A FUCKING .EXE FILE AND GIVE IT TO ME
 
 A running executable is available for download in the [bin](https://github.com/mpalourdio/flhacker/raw/main/bin/flhacker) folder (linux x64 only. Windows users must compile it themselves, or get a true OS).
+
+I may forget to update it while this is not automated at the moment. It may also not target your OS/CPU arhitecture. 
+
+The Best way is to clone and compile if you know what you are doing (or open an issue).
+
+Also, read [this](https://www.reddit.com/r/github/comments/1at9br4/i_am_new_to_github_and_i_have_lots_to_say/?utm_source=share&utm_medium=mweb3x&utm_name=mweb3xcss&utm_term=1&utm_content=share_button) and learn how NOT to be an a$$.
 
 # Warning
 
