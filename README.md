@@ -6,12 +6,12 @@ Intended to run as CLI, it extracts the artwork embedded in audio files (FLAC/MP
 
 # TLDR
 
-- Download extract the [bin and the .so](https://github.com/mpalourdio/flhacker/raw/main/bin/flhacker) (linux x86-64 only. Windows users must compile it themselves, or get a true OS).
+- Download & extract the [bin and the .so](https://github.com/mpalourdio/flhacker/raw/main/bin/flhacker) (linux x86-64 only. Windows users must compile it themselves, or get a true OS).
 - Run `./flhacker -f /tmp/my.flac`
 - Let the magic happen
 
 # Example
-`./flhacker -f ~/home/me/Time.flac`
+`./flhacker -f ~/Desktop/Time.flac`
 
 ![Example](examples/dsotm.png)
 
