@@ -1,15 +1,19 @@
 #!/bin/bash
 
-rm -f bin/*.so
-rm -f bin/*.zip
-rm -f bin/flhacker
+sh_path=$(realpath $0)
+bin_path=$(dirname $sh_path)
+echo Working in $bin_path
 
-cp target/*.so bin
-cp target/flhacker bin
+rm -f $bin_path/*.so
+rm -f $bin_path/*.zip
+rm -f $bin_path/flhacker
 
-zip -j bin/flhacker.zip bin/*.so bin/flhacker
+cp $bin_path/../target/*.so $bin_path
+cp $bin_path/../target/flhacker $bin_path
 
-rm -f bin/*.so
-rm -f bin/flhacker
+zip -j $bin_path/flhacker.zip $bin_path/*.so $bin_path/flhacker
 
-git add bin/flhacker.zip
+rm -f $bin_path/*.so
+rm -f $bin_path/flhacker
+
+git add $bin_path/flhacker.zip
