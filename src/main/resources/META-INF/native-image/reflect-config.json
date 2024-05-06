@@ -52,7 +52,7 @@
 {
   "name":"com.mpalourdio.projects.flhacker.FlhackerApplication",
   "queryAllDeclaredMethods":true,
-  "methods":[{"name":"main","parameterTypes":["java.lang.String[]"] }, {"name":"setBeanFactory","parameterTypes":["org.springframework.beans.factory.BeanFactory"] }]
+  "methods":[{"name":"run","parameterTypes":[] }, {"name":"setBeanFactory","parameterTypes":["org.springframework.beans.factory.BeanFactory"] }]
 },
 {
   "name":"com.mpalourdio.projects.flhacker.FlhackerApplication$$SpringCGLIB$$0",
@@ -61,7 +61,19 @@
   "methods":[{"name":"CGLIB$SET_STATIC_CALLBACKS","parameterTypes":["org.springframework.cglib.proxy.Callback[]"] }, {"name":"CGLIB$SET_THREAD_CALLBACKS","parameterTypes":["org.springframework.cglib.proxy.Callback[]"] }]
 },
 {
-  "name":"com.mpalourdio.projects.flhacker.FlhackerApplication__ApplicationContextInitializer",
+  "name":"com.mpalourdio.projects.flhacker.FlhackerApplication$$SpringCGLIB$$FastClass$$0",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Class"] }]
+},
+{
+  "name":"com.mpalourdio.projects.flhacker.FlhackerApplication$$SpringCGLIB$$FastClass$$1",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Class"] }]
+},
+{
+  "name":"com.mpalourdio.projects.flhacker.FlhackerApplicationKt",
+  "methods":[{"name":"main","parameterTypes":["java.lang.String[]"] }]
+},
+{
+  "name":"com.mpalourdio.projects.flhacker.FlhackerApplicationKt__ApplicationContextInitializer",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
@@ -88,11 +100,15 @@
 },
 {
   "name":"java.lang.Class",
-  "queryAllDeclaredMethods":true
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"getPermittedSubclasses","parameterTypes":[] }, {"name":"getRecordComponents","parameterTypes":[] }, {"name":"isRecord","parameterTypes":[] }, {"name":"isSealed","parameterTypes":[] }]
 },
 {
   "name":"java.lang.ClassLoader",
   "methods":[{"name":"defineClass","parameterTypes":["java.lang.String","byte[]","int","int","java.security.ProtectionDomain"] }]
+},
+{
+  "name":"java.lang.ClassValue"
 },
 {
   "name":"java.lang.Object",
@@ -181,7 +197,54 @@
   "methods":[{"name":"clearCache","parameterTypes":[] }]
 },
 {
-  "name":"kotlin.Metadata"
+  "name":"kotlin.Any"
+},
+{
+  "name":"kotlin.Boolean"
+},
+{
+  "name":"kotlin.Int"
+},
+{
+  "name":"kotlin.Metadata",
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"bv","parameterTypes":[] }, {"name":"d1","parameterTypes":[] }, {"name":"d2","parameterTypes":[] }, {"name":"k","parameterTypes":[] }, {"name":"mv","parameterTypes":[] }, {"name":"pn","parameterTypes":[] }, {"name":"xi","parameterTypes":[] }, {"name":"xs","parameterTypes":[] }]
+},
+{
+  "name":"kotlin.SafePublicationLazyImpl",
+  "fields":[{"name":"_value"}]
+},
+{
+  "name":"kotlin.String"
+},
+{
+  "name":"kotlin.annotation.MustBeDocumented",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"kotlin.annotation.Retention",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"kotlin.annotation.Target",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"kotlin.jvm.JvmInline"
+},
+{
+  "name":"kotlin.jvm.internal.DefaultConstructorMarker"
+},
+{
+  "name":"kotlin.reflect.full.KClasses"
+},
+{
+  "name":"kotlin.reflect.jvm.internal.ReflectionFactoryImpl",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"kotlin.reflect.jvm.internal.impl.resolve.scopes.DescriptorKindFilter",
+  "allPublicFields":true
 },
 {
   "name":"kotlinx.coroutines.reactor.MonoKt"
@@ -274,16 +337,20 @@
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyAPIC"] }, {"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyPIC"] }]
 },
 {
-  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyCOMM",
-  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyCOMM"] }]
-},
-{
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyMCDI",
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyMCDI"] }]
 },
 {
+  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyCOMM",
+  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyCOMM"] }]
+},
+{
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTALB",
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTALB"] }]
+},
+{
+  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTDOR",
+  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTORY"] }]
 },
 {
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTCOM",
@@ -294,12 +361,8 @@
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTCON"] }]
 },
 {
-  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTDOR",
-  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTORY"] }]
-},
-{
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTDRC",
-  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTYER"] }]
+  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTDAT"] }, {"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTYER"] }]
 },
 {
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTENC",
@@ -330,14 +393,6 @@
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTPOS"] }]
 },
 {
-  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTRCK",
-  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTRCK"] }]
-},
-{
-  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTYER",
-  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTYER"] }]
-},
-{
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTPUB",
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTPUB"] }]
 },
@@ -364,6 +419,10 @@
 {
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyUFID",
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyUFID"] }]
+},
+{
+  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTYER",
+  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTYER"] }]
 },
 {
   "name":"org.jboss.logging.Logger"
@@ -434,10 +493,20 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
+  "name":"org.springframework.boot.CommandLineRunner",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true
+},
+{
+  "name":"org.springframework.boot.Runner",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true
+},
+{
   "name":"org.springframework.boot.SpringApplication",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
-  "methods":[{"name":"setBannerMode","parameterTypes":["org.springframework.boot.Banner$Mode"] }, {"name":"setLogStartupInfo","parameterTypes":["boolean"] }]
+  "methods":[{"name":"setBannerMode","parameterTypes":["org.springframework.boot.Banner$Mode"] }]
 },
 {
   "name":"org.springframework.boot.SpringBootConfiguration",
@@ -772,9 +841,6 @@
 {
   "name":"org.springframework.boot.loader.launch.LaunchedClassLoader",
   "methods":[{"name":"clearCache","parameterTypes":[] }]
-},
-{
-  "name":"org.springframework.boot.logging.LogLevelEditor"
 },
 {
   "name":"org.springframework.boot.logging.java.JavaLoggingSystem$Factory",
