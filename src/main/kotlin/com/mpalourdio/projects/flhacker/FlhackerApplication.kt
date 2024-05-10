@@ -22,13 +22,14 @@ class FlhackerApplication {
     @Bean
     fun run(): CommandLineRunner {
         return CommandLineRunner { args ->
-            AudiofileHandler.setUp()
             val cmd: CommandLine = CliHandler.run(args)
+            val audiofileHandler = AudiofileHandler(cmd.getOptionValue(CliHandler.FILE_CMD_LONG_OPTION))
             try {
-                AudiofileHandler.extractResizeSaveArtwork(cmd.getOptionValue(CliHandler.FILE_CMD_LONG_OPTION))
-                AudiofileHandler.generateAsciiArt()
+                audiofileHandler.setUp()
+                audiofileHandler.extractResizeSaveArtwork()
+                audiofileHandler.generateAsciiArt()
             } finally {
-                AudiofileHandler.tearDown()
+                audiofileHandler.tearDown()
             }
         }
     }
