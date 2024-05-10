@@ -337,20 +337,16 @@
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyAPIC"] }, {"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyPIC"] }]
 },
 {
-  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyMCDI",
-  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyMCDI"] }]
-},
-{
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyCOMM",
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyCOMM"] }]
 },
 {
-  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTALB",
-  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTALB"] }]
+  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyMCDI",
+  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyMCDI"] }]
 },
 {
-  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTDOR",
-  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTORY"] }]
+  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTALB",
+  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTALB"] }]
 },
 {
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTCOM",
@@ -359,6 +355,10 @@
 {
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTCON",
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTCON"] }]
+},
+{
+  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTDOR",
+  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTORY"] }]
 },
 {
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTDRC",
@@ -417,12 +417,12 @@
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTXXX"] }]
 },
 {
-  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyUFID",
-  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyUFID"] }]
-},
-{
   "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyTYER",
   "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyTYER"] }]
+},
+{
+  "name":"org.jaudiotagger.tag.id3.framebody.FrameBodyUFID",
+  "methods":[{"name":"<init>","parameterTypes":["org.jaudiotagger.tag.id3.framebody.FrameBodyUFID"] }]
 },
 {
   "name":"org.jboss.logging.Logger"
@@ -506,7 +506,7 @@
   "name":"org.springframework.boot.SpringApplication",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
-  "methods":[{"name":"setBannerMode","parameterTypes":["org.springframework.boot.Banner$Mode"] }]
+  "methods":[{"name":"setBannerMode","parameterTypes":["org.springframework.boot.Banner$Mode"] }, {"name":"setLogStartupInfo","parameterTypes":["boolean"] }]
 },
 {
   "name":"org.springframework.boot.SpringBootConfiguration",
@@ -841,6 +841,9 @@
 {
   "name":"org.springframework.boot.loader.launch.LaunchedClassLoader",
   "methods":[{"name":"clearCache","parameterTypes":[] }]
+},
+{
+  "name":"org.springframework.boot.logging.LogLevelEditor"
 },
 {
   "name":"org.springframework.boot.logging.java.JavaLoggingSystem$Factory",
