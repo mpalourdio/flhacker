@@ -14,7 +14,7 @@ import kotlin.system.exitProcess
 object CliHandler {
     const val FILE_CMD_LONG_OPTION: String = "file"
 
-    fun run(args: Array<String?>?): CommandLine? {
+    fun run(args: Array<String>): CommandLine {
         val options = Options()
         val input =
             Option("f", FILE_CMD_LONG_OPTION, true, "audio file path which contains the artwork to print")
@@ -24,7 +24,7 @@ object CliHandler {
 
         val parser: CommandLineParser = DefaultParser()
         val formatter = HelpFormatter()
-        val cmd: CommandLine?
+        val cmd: CommandLine
 
         try {
             cmd = parser.parse(options, args)

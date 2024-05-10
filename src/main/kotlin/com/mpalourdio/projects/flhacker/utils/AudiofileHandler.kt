@@ -48,7 +48,7 @@ object AudiofileHandler {
         ReadOnlyFileException::class,
         IOException::class
     )
-    fun extractResizeSaveArtwork(audioFilePath: String?) {
+    fun extractResizeSaveArtwork(audioFilePath: String) {
         val audioFile = File(audioFilePath)
         val extractedArtwork = AudioFileIO.read(audioFile)
             .tag

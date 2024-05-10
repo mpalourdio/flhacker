@@ -23,9 +23,9 @@ class FlhackerApplication {
     fun run(): CommandLineRunner {
         return CommandLineRunner { args ->
             AudiofileHandler.setUp()
-            val cmd: CommandLine? = CliHandler.run(args)
+            val cmd: CommandLine = CliHandler.run(args)
             try {
-                AudiofileHandler.extractResizeSaveArtwork(cmd?.getOptionValue(CliHandler.FILE_CMD_LONG_OPTION))
+                AudiofileHandler.extractResizeSaveArtwork(cmd.getOptionValue(CliHandler.FILE_CMD_LONG_OPTION))
                 AudiofileHandler.generateAsciiArt()
             } finally {
                 AudiofileHandler.tearDown()
