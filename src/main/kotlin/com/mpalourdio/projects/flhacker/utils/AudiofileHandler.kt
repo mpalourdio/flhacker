@@ -24,31 +24,31 @@ import java.io.File
 import java.io.IOException
 import javax.imageio.ImageIO
 
-object AudiofileHandler {
-    private val TMP_DIR: String = System.getProperty("java.io.tmpdir")
-    private val TMP_RESIZED_ARTWORK = "$TMP_DIR/resized.jpg"
-    private const val TARGET_SIZE = 80
-    private val TMP_RESIZED_FILE = File(TMP_RESIZED_ARTWORK)
+class AudiofileHandler(private val audioFilePath: String) {
 
-    @JvmStatic
+    companion object {
+        private const val TARGET_SIZE = 80
+        private val TMP_DIR: String = System.getProperty("java.io.tmpdir")
+        private val TMP_RESIZED_ARTWORK = "$TMP_DIR/resized.jpg"
+        private val TMP_RESIZED_FILE = File(TMP_RESIZED_ARTWORK)
+    }
+
     fun setUp() {
         FileUtils.deleteQuietly(TMP_RESIZED_FILE)
     }
 
-    @JvmStatic
     fun tearDown() {
         setUp()
     }
 
-    @JvmStatic
     @Throws(
         CannotReadException::class,
         TagException::class,
         InvalidAudioFrameException::class,
         ReadOnlyFileException::class,
-        IOException::class
+        IOException::class,
     )
-    fun extractResizeSaveArtwork(audioFilePath: String) {
+    fun extractResizeSaveArtwork() {
         val audioFile = File(audioFilePath)
         val extractedArtwork = AudioFileIO.read(audioFile)
             .tag
@@ -56,14 +56,17 @@ object AudiofileHandler {
             .image
 
         val scaledArtwork =
-            (extractedArtwork as BufferedImage).getScaledInstance(TARGET_SIZE, TARGET_SIZE, Image.SCALE_DEFAULT)
+            (extractedArtwork as BufferedImage).getScaledInstance(
+                TARGET_SIZE,
+                TARGET_SIZE,
+                Image.SCALE_DEFAULT
+            )
         val resized = BufferedImage(TARGET_SIZE, TARGET_SIZE, BufferedImage.TYPE_INT_RGB)
         resized.graphics.drawImage(scaledArtwork, 0, 0, null)
 
         ImageIO.write(resized, "png", TMP_RESIZED_FILE)
     }
 
-    @JvmStatic
     fun generateAsciiArt() {
         val symbols = arrayOf(" ", ".", "-", "I", "W", "@")
         val parserConfig = ParserBuilder.startBuild()
