@@ -9,31 +9,33 @@
 package com.mpalourdio.projects.flhacker.utils
 
 import org.apache.commons.cli.*
-import kotlin.system.exitProcess
 
-object CliHandler {
-    const val FILE_CMD_LONG_OPTION: String = "file"
 
-    fun run(args: Array<String>): CommandLine {
+class CliHandler(args: Array<String>) {
+    private val fileCmdLongOption: String = "file"
+    var filePath: String = ""
+        private set
+
+    init {
         val options = Options()
-        val input =
-            Option("f", FILE_CMD_LONG_OPTION, true, "The audio file path which contains the artwork to print")
-
+        val input = Option(
+            "f",
+            fileCmdLongOption,
+            true,
+            "The audio file path which contains the artwork to print"
+        )
         input.isRequired = true
         options.addOption(input)
 
         val parser: CommandLineParser = DefaultParser()
         val formatter = HelpFormatter()
-        val cmd: CommandLine
+        val cmd = { o: Options, a: Array<String> -> parser.parse(o, a) }
 
         try {
-            cmd = parser.parse(options, args)
+            filePath = cmd(options, args).getOptionValue(fileCmdLongOption)
         } catch (e: ParseException) {
-            println(e.message)
-            formatter.printHelp("cli", options)
-            exitProcess(1)
+            System.err.println(e.message)
+            formatter.printHelp("Specify the file path like below", options)
         }
-
-        return cmd
     }
 }
