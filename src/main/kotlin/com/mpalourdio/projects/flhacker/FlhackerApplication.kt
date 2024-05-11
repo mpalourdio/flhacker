@@ -10,7 +10,6 @@ package com.mpalourdio.projects.flhacker
 
 import com.mpalourdio.projects.flhacker.utils.AudiofileHandler
 import com.mpalourdio.projects.flhacker.utils.CliHandler
-import org.apache.commons.cli.CommandLine
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -22,16 +21,15 @@ class FlhackerApplication {
     @Bean
     fun run(): CommandLineRunner {
         return CommandLineRunner { args ->
-            val cmd: CommandLine = CliHandler.run(args)
-            val audiofileHandler = AudiofileHandler(cmd.getOptionValue(CliHandler.FILE_CMD_LONG_OPTION))
+            val cliHandler = CliHandler(args)
+            val audiofileHandler = AudiofileHandler(cliHandler.filePath)
             try {
                 audiofileHandler.setUp()
                 audiofileHandler.extractResizeSaveArtwork()
                 audiofileHandler.generateAsciiArt()
             } catch (e: Exception) {
                 println(e.message)
-            }
-            finally {
+            } finally {
                 audiofileHandler.tearDown()
             }
         }
