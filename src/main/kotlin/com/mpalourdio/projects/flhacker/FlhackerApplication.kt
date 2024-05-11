@@ -28,7 +28,10 @@ class FlhackerApplication {
                 audiofileHandler.setUp()
                 audiofileHandler.extractResizeSaveArtwork()
                 audiofileHandler.generateAsciiArt()
-            } finally {
+            } catch (e: Exception) {
+                println(e.message)
+            }
+            finally {
                 audiofileHandler.tearDown()
             }
         }

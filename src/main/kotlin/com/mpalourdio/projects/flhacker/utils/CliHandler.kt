@@ -17,7 +17,7 @@ object CliHandler {
     fun run(args: Array<String>): CommandLine {
         val options = Options()
         val input =
-            Option("f", FILE_CMD_LONG_OPTION, true, "audio file path which contains the artwork to print")
+            Option("f", FILE_CMD_LONG_OPTION, true, "The audio file path which contains the artwork to print")
 
         input.isRequired = true
         options.addOption(input)
@@ -30,7 +30,7 @@ object CliHandler {
             cmd = parser.parse(options, args)
         } catch (e: ParseException) {
             println(e.message)
-            formatter.printHelp("utility-name", options)
+            formatter.printHelp("cli", options)
             exitProcess(1)
         }
 
