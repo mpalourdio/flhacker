@@ -46,8 +46,3 @@ The running executable available in the [zip](https://github.com/mpalourdio/flha
 The best way to be up-to-date is to clone the repo and compile the sources if you know what you are doing (or open an issue).
 
 Also, read [this](https://www.reddit.com/r/github/comments/1at9br4/i_am_new_to_github_and_i_have_lots_to_say/?utm_source=share&utm_medium=mweb3x&utm_name=mweb3xcss&utm_term=1&utm_content=share_button) and learn how NOT to be an a$$.
-
-# Warning
-
-Use at your own risk, no unit-test, let's live dangerously.
-
