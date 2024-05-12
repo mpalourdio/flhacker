@@ -4,25 +4,25 @@ on: [ push, pull_request, workflow_dispatch ]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       max-parallel: 4
       matrix:
-        java-version: [ 21.x ]
         graalvm-version: [ 21 ]
+
+    #needed for GH Pages
+    permissions:
+      pages: write
+      id-token: write
+
+    #needed for GH Pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Set up JDK ${{ matrix.java-version }}
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: ${{ matrix.java-version }}
-
-      - name: Run tests
-        run: ./mvnw clean package
 
       - uses: graalvm/setup-graalvm@v1
         with:
@@ -31,3 +31,22 @@ jobs:
 
       - name: GraalVM Compile
         run: ./mvnw clean -Pnative native:compile
+
+      - name: Create ZIP and move it to tmp folder
+        if: github.ref == 'refs/heads/main'
+        run: mkdir tmp && zip -j tmp/flhacker.zip target/*.so target/flhacker
+
+      - name: Setup Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages artifact
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'tmp'
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        id: deployment
+        uses: actions/deploy-pages@v4

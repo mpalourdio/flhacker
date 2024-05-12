@@ -41,7 +41,7 @@ The needed `reachabilty metadata` are in the [src/main/resources/META-INF/native
 
 # JUST MAKE A FUCKING .EXE FILE AND GIVE IT TO ME
 
-The running executable available in the [zip](https://github.com/mpalourdio/flhacker/raw/main/bin/flhacker.zip) is linux x86-64 only. I may forget to update the bin because this is not automated for now. It may also not target your OS/CPU architecture. 
+The running executable available in the [zip](https://mpalourdio.github.io/flhacker/flhacker.zip) is linux x86-64 only, built on `ubuntu-20.04` via `GitHub Actions`. So, it may not target your OS/CPU/libc architecture. 
 
 The best way to be up-to-date is to clone the repo and compile the sources if you know what you are doing (or open an issue).
 
