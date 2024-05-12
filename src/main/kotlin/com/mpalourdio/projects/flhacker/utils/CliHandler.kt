@@ -10,7 +10,6 @@ package com.mpalourdio.projects.flhacker.utils
 
 import org.apache.commons.cli.*
 
-
 class CliHandler(args: Array<String>) {
     private val fileCmdLongOption: String = "file"
     var filePath: String = ""
