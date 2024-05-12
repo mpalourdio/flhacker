@@ -36,7 +36,7 @@ class CliHandlerTest {
     }
 
     @Test
-    fun shouldSetFilePathIdExists() {
+    fun shouldSetFilePathIfExists() {
         val filePath = "/dev/null"
         val cliHandler = CliHandler(arrayOf("-f", filePath))
         assertEquals(filePath, cliHandler.filePath)
