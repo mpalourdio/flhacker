@@ -10,16 +10,6 @@ jobs:
       matrix:
         graalvm-version: [ 21 ]
 
-    #needed for GH Pages
-    permissions:
-      pages: write
-      id-token: write
-
-    #needed for GH Pages
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,12 +24,7 @@ jobs:
         run: ./mvnw clean -Pnative native:compile
 
       - name: Create ZIP and move it to tmp folder
-        if: github.ref == 'refs/heads/main'
         run: mkdir tmp && zip -j tmp/flhacker.zip target/*.so target/flhacker
-
-      - name: Setup Pages
-        if: github.ref == 'refs/heads/main'
-        uses: actions/configure-pages@v5
 
       - name: Upload GitHub Pages artifact
         if: github.ref == 'refs/heads/main'
@@ -47,7 +32,23 @@ jobs:
         with:
           path: 'tmp'
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
       - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
         id: deployment
         uses: actions/deploy-pages@v4
