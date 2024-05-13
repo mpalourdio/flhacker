@@ -19,6 +19,7 @@ jobs:
           distribution: 'liberica'
           java-version: ${{ matrix.graalvm-version }}
           cache: 'maven'
+          native-image-musl: true
 
       - name: GraalVM Compile
         run: ./mvnw clean -Pnative native:compile
