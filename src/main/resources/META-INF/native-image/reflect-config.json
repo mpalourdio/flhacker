@@ -122,14 +122,6 @@
   "queryAllDeclaredMethods":true
 },
 {
-  "name":"java.lang.Thread",
-  "methods":[{"name":"ofVirtual","parameterTypes":[] }]
-},
-{
-  "name":"java.lang.ThreadBuilders$VirtualThreadBuilder",
-  "methods":[{"name":"factory","parameterTypes":[] }]
-},
-{
   "name":"java.lang.reflect.ParameterizedType",
   "methods":[{"name":"getActualTypeArguments","parameterTypes":[] }, {"name":"getRawType","parameterTypes":[] }]
 },
