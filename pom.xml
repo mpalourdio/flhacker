@@ -20,7 +20,7 @@
 
         <commons-cli.version>1.7.0</commons-cli.version>
         <commons-io.version>2.16.1</commons-io.version>
-        <image-to-ascii.version>0.0.</image-to-ascii.version>
+        <image-to-ascii.version>0.0.4</image-to-ascii.version>
         <jaudiotagger.version>3.0.1</jaudiotagger.version>
     </properties>
 
@@ -44,7 +44,7 @@
         <dependency>
             <groupId>io.github.seujorgenochurras</groupId>
             <artifactId>image-to-ascii</artifactId>
-            <version>${image-to-ascii.version}4</version>
+            <version>${image-to-ascii.version}</version>
         </dependency>
 
         <dependency>
