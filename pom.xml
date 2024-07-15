@@ -94,7 +94,7 @@
                             <buildpack>docker.io/paketobuildpacks/syft</buildpack>
                             <buildpack>docker.io/paketobuildpacks/executable-jar</buildpack>
                             <buildpack>docker.io/paketobuildpacks/spring-boot</buildpack>
-                            <buildpack>docker.io/dmikusa/paketo-native-image</buildpack>
+                            <buildpack>docker.io/paketobuildpacks/native-image</buildpack>
                         </buildpacks>
                         <env>
                             <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
