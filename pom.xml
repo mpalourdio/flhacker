@@ -85,22 +85,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <image>
-                        <builder>paketobuildpacks/builder-jammy-base</builder>
-                        <buildpacks>
-                            <buildpack>docker.io/paketobuildpacks/oracle</buildpack>
-                            <buildpack>docker.io/paketobuildpacks/ca-certificates</buildpack>
-                            <buildpack>docker.io/paketobuildpacks/syft</buildpack>
-                            <buildpack>docker.io/paketobuildpacks/executable-jar</buildpack>
-                            <buildpack>docker.io/paketobuildpacks/spring-boot</buildpack>
-                            <buildpack>docker.io/paketobuildpacks/native-image</buildpack>
-                        </buildpacks>
-                        <env>
-                            <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
-                        </env>
-                    </image>
-                </configuration>
                 <executions>
                     <execution>
                         <goals>
