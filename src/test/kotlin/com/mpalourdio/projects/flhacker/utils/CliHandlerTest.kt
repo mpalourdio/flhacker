@@ -1,8 +1,7 @@
 package com.mpalourdio.projects.flhacker.utils
 
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.AfterEach
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import java.io.ByteArrayOutputStream
@@ -26,19 +25,19 @@ class CliHandlerTest {
     @Test
     fun testNoOptionsPrintsHelp() {
         CliHandler(arrayOf()).toString()
-        assertTrue(outputStreamCaptor.toString().contains("-f,--file"))
+        assertThat(outputStreamCaptor.toString().contains("-f,--file")).isTrue()
     }
 
     @Test
     fun testWrongOptionsPrintsHelp() {
         CliHandler(arrayOf("a", "hello")).toString()
-        assertTrue(outputStreamCaptor.toString().contains("-f,--file"))
+        assertThat(outputStreamCaptor.toString().contains("-f,--file")).isTrue()
     }
 
     @Test
     fun shouldSetFilePathIfExists() {
         val filePath = "/dev/null"
         val cliHandler = CliHandler(arrayOf("-f", filePath))
-        assertEquals(filePath, cliHandler.filePath)
+        assertThat(cliHandler.filePath).isEqualTo(filePath)
     }
 }
