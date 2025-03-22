@@ -18,7 +18,7 @@
         <java.version>21</java.version>
         <kotlin.version>1.9.25</kotlin.version>
 
-        <commons-cli.version>1.7.0</commons-cli.version>
+        <commons-cli.version>1.9.0</commons-cli.version>
         <commons-io.version>2.18.0</commons-io.version>
         <image-to-ascii.version>0.0.4</image-to-ascii.version>
         <jaudiotagger.version>3.0.1</jaudiotagger.version>
