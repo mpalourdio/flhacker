@@ -19,7 +19,7 @@
         <kotlin.version>1.9.25</kotlin.version>
 
         <commons-cli.version>1.9.0</commons-cli.version>
-        <commons-io.version>2.18.0</commons-io.version>
+        <commons-io.version>2.19.0</commons-io.version>
         <image-to-ascii.version>0.0.5</image-to-ascii.version>
         <jaudiotagger.version>3.0.1</jaudiotagger.version>
     </properties>
