@@ -28,8 +28,8 @@ Who knows ?
 
 # Requirements for hacking the codebase
 
-- Java 21 / maven 3.6+
-- GraalVM 23+ for native image compilation support
+- Java 25 / maven 3.9+
+- GraalVM 25+ for native image compilation support
 
 # GraalVM Native image support
 
