@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>25</java.version>
-        <kotlin.version>2.3.0-RC</kotlin.version>
+        <kotlin.version>2.3.0-RC2</kotlin.version>
 
         <commons-cli.version>1.11.0</commons-cli.version>
         <commons-io.version>2.21.0</commons-io.version>
