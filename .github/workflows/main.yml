@@ -12,13 +12,14 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v5
 
       - uses: graalvm/setup-graalvm@v1
         with:
           distribution: 'liberica'
           java-version: ${{ matrix.graalvm-version }}
           cache: 'maven'
+          native-image-musl: true
 
       - name: GraalVM Compile
         run: ./mvnw clean -Pnative native:compile
